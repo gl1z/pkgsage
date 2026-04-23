@@ -42,6 +42,4 @@ The database currently covers ~30 common NuGet packages including Newtonsoft.Jso
 
 ## Contributing
 
-The symbol database lives in `data/seed.sql`. If a package is missing, adding it is a one git add .
-git commit -m "readme"
-git push origin mainline SQL insert. Contributions welcome.
+The symbol database lives in `data/seed.sql`. If a package is missing, adding it is a one line SQL insert. Contributions welcome.
