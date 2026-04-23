@@ -20,14 +20,17 @@ pip install -e .
 ```bash
 pkgsage path/to/MyProject.csproj
 ```
-
 Example output:
 
+```
 Running dotnet build on MyProject.csproj...
+
 [CS0246] Could not find 'JsonConvert'
-→ dotnet add package Newtonsoft.Json
+  → dotnet add package Newtonsoft.Json
+
 [CS0246] Could not find 'IMapper'
-→ dotnet add package AutoMapper
+  → dotnet add package AutoMapper
+```
 
 ## Current coverage
 
