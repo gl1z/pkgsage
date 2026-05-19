@@ -11,6 +11,10 @@ def main():
     parser.add_argument("--csproj", help="path to .csproj for installed package filtering", default=None)
     args = parser.parse_args()
 
+    csproj_path = args.csproj
+    if csproj_path is None and args.project.endswith(".csproj"):
+        csproj_path = args.project
+
     print(f"Running dotnet build on {args.project}...")
     returncode, output = run_build(args.project)
 
@@ -25,7 +29,7 @@ def main():
         print(output)
         return
 
-    suggestions = resolve(errors, csproj_path=args.csproj)
+    suggestions = resolve(errors, csproj_path=csproj_path)
 
     print()
     for s in suggestions:
