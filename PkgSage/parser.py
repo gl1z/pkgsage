@@ -10,6 +10,9 @@ PATTERNS = {
     "CS0012": re.compile(
         r"error CS0012: The type '([\w.<>]+)' is defined in an assembly that is not referenced"
     ),
+    "CS0103": re.compile(
+    r"error CS0103: The name '(\w+)' does not exist in the current context"
+),
 }
 
 def parse_errors(build_output: str) -> list[dict]:
